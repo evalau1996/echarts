@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+option = {
+    title: {
+        text: 'Population by Sex, 1991, 1996 and 2001'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: { 
+            type: 'shadow' 
+        }
+    },
+    legend: {
+        data: ['Male', 'Female'],
+        align: 'right',
+        right: 10
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['1991', '1996',  '2001']
+    }],
+    yAxis: [{
+        type: 'value',
+        name: 'Number',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    }],
+    series: [{
+        name: 'Male',
+        type: 'bar',
+        data: [2811991, 3108107, 3285344]
+    }, {
+        name: 'Female',
+        type: 'bar',
+        data: [2710290, 3109449, 3424045]
+    }]
+};
+</body>
+</html>
